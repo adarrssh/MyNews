@@ -5,7 +5,7 @@ It is made with the help of (https://newsapi.org/) News Api.
 <img width="937" alt="image" src="https://user-images.githubusercontent.com/85433137/160276722-6cfaa882-8c00-47bd-a1a2-742d24aa6b3f.png">
 
 
-#Features
+# Features
 1. Different categories of News in Navbar, Click on a category to go to that news.
 <img width="475" alt="image" src="https://user-images.githubusercontent.com/85433137/160276981-f6c87f62-e755-4fb4-9493-05aa794a50a8.png">
 
