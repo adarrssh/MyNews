@@ -15,7 +15,17 @@ const science_url = 'https://newsapi.org/v2/everything?q=science&from=2022-03-25
 const technology_url = 'https://newsapi.org/v2/everything?q=technology&from=2022-03-25&sortBy=popularity&apiKey=' + api_key;
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+const navbar= document.querySelector('.navbar');
+const navlist = document.querySelector('.nav-list');
+const rightnav = document.querySelector('.rightNav');
+const burger = document.querySelector('.burger');
 
+
+burger.addEventListener('click',()=>{
+    navbar.classList.toggle('h-nav-res')
+    navlist.classList.toggle('v-class-res');
+    rightnav.classList.toggle('v-class-res');
+})
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
