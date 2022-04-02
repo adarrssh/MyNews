@@ -33,6 +33,11 @@ form.addEventListener("submit", (e) => {
 //default news
 getNews(headline_url)
 
+//recent news
+home.addEventListener('click',()=>{
+    getNews(headline_url)
+})
+
 // general news
 general.addEventListener('click', () => {
     getNews(general_url)
@@ -68,7 +73,7 @@ technology.addEventListener('click', () => {
 async function getNews(headline_url) {
     const resp = await fetch(headline_url);
     const respData = await resp.json();
-    console.log(respData);
+    console.log(respData.articles);
     showNews(respData.articles);
 }
 
@@ -86,8 +91,9 @@ function showNews(news_articles) {
 
         newEl.innerHTML = `
         <img
+        class="red"
           src="${urlToImage}"
-          alt="${title}"
+          alt="Image not available for this article"
         />
 
         <div class="news-info">
@@ -96,6 +102,7 @@ function showNews(news_articles) {
 
         <div class="overview">
          ${description}
+         <a href=${url} target ='_blank'>Read More Here</a>
         </div>
         `
 

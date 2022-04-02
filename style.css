@@ -1,28 +1,18 @@
-*body{
+body{
     padding: 0;
     margin: 0;
-
+    background-color: #22254b;
+    
 }
 
-:root{
-    --primary-color:#edf2fc;
-    --secondary-color:#212121;
-
-}
-
-.dark-theme{
-    --primary-color:#212121;
-    --secondary-color:#edf2fc;
-}
-
-.navbar{
+ .navbar{
     display: flex;
-    background-color: rgb(255, 255, 255);
     font-family: sans-serif;
+    background-color:  #373b69;;
 }
+
 .nav-list{
  width: 50%;
- /* background-color: black; */
  display: flex;
 align-items: center;
 }
@@ -38,43 +28,77 @@ padding: 1rem;
     list-style: none;
 color: rgb(201, 57, 57);    }
     
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 
-/* .nav-list li a:hover{
+.red{
+    color: red;
+}
+.search {
+    background-color: transparent;
+    border: 2px solid #22254b;
+    border-radius: 50px;
+    color: rgb(8, 8, 8);
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+    color: #111111;
+}
+
+.search:focus {
+    background-color: #22254b;
+    outline: none;
+}
+
+.search:hover{
     cursor: pointer;
-    color: green;
-} */
-/* .nav-list li a{
-text-decoration: none;
-} */
-
+}
 
 
 
 .rightNav{
     width: 50%;
-    /* background-color: aqua; */
     text-align: right;
     padding: 23px;
 }
 
-#search{
-    padding: 5px;
-    font-size: 17px;
-    border-radius: 2px solid black;
+
+.search {
+    background-color: transparent;
+    border: 2px solid #22254b;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    background-color: #22254b;
+    outline: none;
 }
 
 #main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background:var(--primary-color);
-}
+    }
 .news{
     margin: 1rem;
     width: 300px;    
-    background-color:rgb(240, 230, 230);
-    color: black;
-    box-shadow: 5px 5px 5px rgb(148, 143, 143);
+    background-color:#373b69;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(53, 52, 52);
+    
 }
 
 .news img{
@@ -90,4 +114,4 @@ text-decoration: none;
 .overview{
     padding: 0.5rem;
 }
-
+  
