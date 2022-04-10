@@ -88,7 +88,6 @@ technology.addEventListener('click', () => {
 async function getNews(headline_url) {
     const resp = await fetch(headline_url);
     const respData = await resp.json();
-    console.log(respData.articles);
     showNews(respData.articles);
 }
 
@@ -98,24 +97,23 @@ function showNews(news_articles) {
 
 
     news_articles.forEach((element) => {
-        const { urlToImage, url, title, description } = element;
         const newEl = document.createElement('div');
         newEl.classList.add('news');
 
         newEl.innerHTML = `
         <img
         class="red"
-          src="${urlToImage}"
+          src="${element.urlToImage}"
           alt="Image not available for this article"
         />
 
         <div class="news-info">
-          <h3>${title}</h3>
+          <h3>${element.title}</h3>
         </div>
 
         <div class="overview">
-         ${description}
-         <a href=${url} target ='_blank'>Read More Here</a>
+         ${element.description}
+         <a href=${element.url} target ='_blank'>Read More Here</a>
         </div>
         `
 
